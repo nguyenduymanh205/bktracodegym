@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <script>
+      let n = parseInt(prompt("Nhập số lượng phần tử:"));
+
+      let mang = [];
+
+      for (let i = 0; i < n; i++) {
+        mang[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1)));
+      }
+
+      function laSoNguyenTo(x) {
+        if (x < 2) {
+          return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(x); i++) {
+          if (x % i == 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      let tong = 0;
+
+      console.log("Các số nguyên tố:");
+
+      for (let i = 0; i < mang.length; i++) {
+        if (laSoNguyenTo(mang[i])) {
+          console.log(mang[i]);
+
+          tong += mang[i];
+        }
+      }
+
+      console.log("Tổng các số nguyên tố:", tong);
+    </script>
+  </body>
+</html>
