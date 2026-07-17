@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 4</title>
+  </head>
+  <body>
+    <script>
+      let diemLop = [7, 9, 4, 8, 6, 10, 3, 5];
+
+      console.log("Số lượng học viên:", diemLop.length);
+
+      let tong = 0;
+      let max = diemLop[0];
+      let min = diemLop[0];
+      let dat = 0;
+
+      for (let i = 0; i < diemLop.length; i++) {
+        tong += diemLop[i];
+
+        if (diemLop[i] > max) {
+          max = diemLop[i];
+        }
+
+        if (diemLop[i] < min) {
+          min = diemLop[i];
+        }
+
+        if (diemLop[i] >= 5) {
+          dat++;
+        }
+      }
+
+      let trungBinh = tong / diemLop.length;
+
+      console.log("Tổng điểm:", tong);
+      console.log("Điểm trung bình:", trungBinh);
+      console.log("Điểm cao nhất:", max);
+      console.log("Điểm thấp nhất:", min);
+      console.log("Số học viên đạt:", dat);
+    </script>
+  </body>
+</html>
